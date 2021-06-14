@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
+import './index.css';
+
+import Pokedex from './components/Pokedex';
+
 ReactDOM.render(
   <React.StrictMode>
-    TODO: Insert pokedex app here.
+    <Pokedex />
   </React.StrictMode>,
   document.getElementById('root')
 );
