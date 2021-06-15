@@ -1,0 +1,30 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen__image {
+  background: #7e949d;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.screen__image img {
+  width: 40%;
+  height: auto;
+}
+
+.screen__details {
+  flex: 1;
+  font-size: .75rem;
+  margin: 0;
+}
+
+.screen__details-item {
+  /* background: #7e949d;
+  border-radius: 1rem; */
+  display: flex;
+  padding: .5rem 1rem;
+}

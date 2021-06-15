@@ -1,0 +1,13 @@
+.details {
+  /* padding: .5rem 0; */
+  font-size: .875rem;
+}
+
+.details__title {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.details__subtitle {
+  font-size: .875rem;
+}

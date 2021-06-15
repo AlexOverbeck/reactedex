@@ -1,4 +1,5 @@
 import './Pokedex.css';
+import Screen from './Screen';
 import Search from './Search';
 
 function Pokedex(){
@@ -13,7 +14,9 @@ function Pokedex(){
           <Search />
         </div>
       </div>
-      <div>TODO: Pokedex Screen Goes Here!</div>
+      <div className="pokedex__bottom">
+        <Screen />
+      </div>
     </div>
   );
 }

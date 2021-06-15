@@ -1,19 +1,22 @@
 .pokedex {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.pokedex__top {
   background: linear-gradient(var(--pokedex-red), var(--pokedex-red)), 
               linear-gradient(to bottom, var(--pokedex-red-light), var(--pokedex-red-dark));
   border: 10px solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
-  background-color: var(--pokedex-red);
   border-radius: 1rem;
-  padding: 1rem;
+  display: flex;
+  padding: 1rem 1rem 2rem 1rem;
   position: relative;
-  width: 450px;
-  /* height: 250px; */
-  margin: 0 auto;
+  z-index: 10;
 }
 
-.pokedex::before {
+.pokedex__top::before {
   content: "";
   pointer-events: none;
   position: absolute;
@@ -25,7 +28,7 @@
   border-radius: .8rem;
 }
 
-.pokedex::after {
+.pokedex__top::after {
   content: "";
   position: absolute;
   bottom: 1rem;
@@ -34,10 +37,6 @@
   height: .5rem;
   background-color: var(--pokedex-red-dark);
   border-radius: .25rem;
-}
-
-.pokedex__top {
-  display: flex;
 }
 
 .pokedex__form {
@@ -132,4 +131,36 @@
   --color: #73e055;
   --color-light: #9ae076;
   --color-dark: #499c2e;
+}
+
+.pokedex__bottom {
+  --background: #e6e6e6;
+  --background-light: #eaeaea;
+  --background-dark: #d9dcdd;
+
+  background: var(--background);
+  border: 10px solid transparent;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background: linear-gradient(217deg, var(--background) 30%, #c4cbce 30%),
+              linear-gradient(var(--background), var(--background)),
+              linear-gradient(to bottom, var(--background-light), var(--background-dark));
+  background-repeat: no-repeat;
+  background-origin: padding-box, padding-box, border-box;
+  padding: 1rem;
+  position: relative;
+  top: -1rem;
+}
+
+.pokedex__bottom::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  border: 6px solid var(--background);
+  border-bottom-right-radius: .8rem;
+  border-bottom-left-radius: .8rem;
 }

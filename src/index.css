@@ -4,3 +4,8 @@
   --pokedex-red-dark: #cf2b35;
   --yellow: #ffca1b;
 }
+
+body,
+input {
+  font-family: 'Press Start 2P', sans-serif;
+}
