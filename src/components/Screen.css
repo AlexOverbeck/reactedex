@@ -17,16 +17,3 @@
   height: 100%;
   width: auto;
 }
-
-.screen__details {
-  flex: 1;
-  font-size: .75rem;
-  margin: 0;
-}
-
-.screen__details-item {
-  /* background: #7e949d;
-  border-radius: 1rem; */
-  display: flex;
-  padding: .5rem 1rem;
-}

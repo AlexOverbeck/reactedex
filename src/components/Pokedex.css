@@ -11,6 +11,7 @@
   background-origin: padding-box, border-box;
   border-radius: 1rem;
   display: flex;
+  flex-wrap: wrap;
   padding: 1rem 1rem 2rem 1rem;
   position: relative;
   z-index: 10;
@@ -41,10 +42,13 @@
 
 .pokedex__form {
   align-self: center;
-  flex: 1;
+  flex: 1 0 auto;
+  justify-self: stretch;
+  margin: .5rem 0;
 }
 
 .pokedex__camera {
+  flex: 0 0 auto;
   background: radial-gradient(
     circle at bottom,
     #cde0e6,#dbebef
@@ -131,6 +135,7 @@
   --color: #73e055;
   --color-light: #9ae076;
   --color-dark: #499c2e;
+  margin-right: 1rem;
 }
 
 .pokedex__bottom {
