@@ -2,7 +2,7 @@ import Details from "./Details";
 
 import "./Screen.css"
 
-function Screen() {
+function Screen(props) {
   return (
     <div className="screen">
       <div className="screen__image">
@@ -11,7 +11,7 @@ function Screen() {
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
         />
       </div>
-      <Details />
+      <Details pokemon={props.pokemon} />
     </div>
   );
 }
