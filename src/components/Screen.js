@@ -22,7 +22,7 @@ function Screen(props) {
   return (
     <div className="screen">
       <div className="screen__image">
-        <img {...image} />
+        <img src={image.src} alt={image.alt} />
       </div>
       <Details pokemon={props.pokemon} />
     </div>
