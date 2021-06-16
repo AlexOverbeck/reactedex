@@ -1,17 +1,30 @@
-import Details from "./Details";
+import { useEffect, useState } from "react";
 
+import Details from "./Details";
 import "./Screen.css"
 
-function Screen() {
+function Screen(props) {
+  const [image, setImage] = useState({
+    alt: "The silhouette of a mystery pokemon",
+    src: "/whos-that-bulba.svg",
+  });
+
+  useEffect(() => {
+    if ("id" in props.pokemon) {
+      const baseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/";
+      setImage({
+        alt: `a happy looking ${props.pokemon.name}`,
+        src: baseUrl + `${props.pokemon.id}.svg`
+      });
+    }
+  }, [props.pokemon])
+
   return (
     <div className="screen">
       <div className="screen__image">
-        <img
-          alt="A lively looking Pikachu"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
-        />
+        <img {...image} />
       </div>
-      <Details />
+      <Details pokemon={props.pokemon} />
     </div>
   );
 }

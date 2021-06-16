@@ -9,11 +9,13 @@
   padding: 1rem 3rem;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 1rem;
+  height: 8rem;
 }
 
 .screen__image img {
-  width: 40%;
-  height: auto;
+  height: 100%;
+  width: auto;
 }
 
 .screen__details {
