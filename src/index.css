@@ -8,4 +8,10 @@
 body,
 input {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, .98), rgba(255, 255, 255, .98)
+  ), url("./images/pokeballs.png");
+  background-size: auto, 300px 300px;
+  background-repeat: repeat, repeat;
 }
