@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reactedex/static/css/main.356474c5.chunk.css",
+    "main.js": "/reactedex/static/js/main.cd81d62f.chunk.js",
+    "main.js.map": "/reactedex/static/js/main.cd81d62f.chunk.js.map",
+    "runtime-main.js": "/reactedex/static/js/runtime-main.df1cf77a.js",
+    "runtime-main.js.map": "/reactedex/static/js/runtime-main.df1cf77a.js.map",
+    "static/js/2.4da1cf73.chunk.js": "/reactedex/static/js/2.4da1cf73.chunk.js",
+    "static/js/2.4da1cf73.chunk.js.map": "/reactedex/static/js/2.4da1cf73.chunk.js.map",
+    "static/js/3.50184e30.chunk.js": "/reactedex/static/js/3.50184e30.chunk.js",
+    "static/js/3.50184e30.chunk.js.map": "/reactedex/static/js/3.50184e30.chunk.js.map",
+    "index.html": "/reactedex/index.html",
+    "static/css/main.356474c5.chunk.css.map": "/reactedex/static/css/main.356474c5.chunk.css.map",
+    "static/js/2.4da1cf73.chunk.js.LICENSE.txt": "/reactedex/static/js/2.4da1cf73.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/reactedex/static/media/pokeballs.3b0d6211.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df1cf77a.js",
+    "static/js/2.4da1cf73.chunk.js",
+    "static/css/main.356474c5.chunk.css",
+    "static/js/main.cd81d62f.chunk.js"
+  ]
+}
