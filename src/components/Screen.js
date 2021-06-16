@@ -11,10 +11,10 @@ function Screen(props) {
 
   useEffect(() => {
     if ("id" in props.pokemon) {
-      const baseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/";
+      const baseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
       setImage({
         alt: `a happy looking ${props.pokemon.name}`,
-        src: baseUrl + `${props.pokemon.id}.svg`
+        src: baseUrl + `${props.pokemon.id}.png`
       });
     }
   }, [props.pokemon])

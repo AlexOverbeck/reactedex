@@ -19,12 +19,18 @@ function Pokedex(){
 
   useEffect(()=>{
     if (data && data.pokemon.length) {
-      const firstPokemon = Object(data.pokemon[0]);
+      let nextPokemon = data.pokemon[0];
+
+      if (data.pokemon.length > 1) {
+        nextPokemon = data.pokemon[Math.floor(Math.random()*data.pokemon.length)]
+      }
+      console.log("next", data);
+      console.log("next", nextPokemon);
 
       setPokemon({
-        id: firstPokemon.id,
-        name: firstPokemon.name,
-        description: firstPokemon.description[0].flavor_text,
+        id: nextPokemon.id,
+        name: nextPokemon.name,
+        description: nextPokemon.description[0].flavor_text,
       });
     }
   }, [data]);
