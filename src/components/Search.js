@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import './Search.css'
 
-function Search() {
-  const [search, setSearch] = useState("");
+function Search(props) {
+  const [inputValue, setInputValue] = useState("");
+
+  useEffect(()=>{
+    if (props.setSearch) {
+      const timeoutId = setTimeout(() => props.setSearch(inputValue), 1000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [inputValue]);
 
   return (
     <form className="search">
@@ -15,8 +22,8 @@ function Search() {
         className="search__input"
         name="search"
         placeholder="Search for a pokemon"
-        value={search}
-        onChange={(event) => setSearch(event.target.value)}
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
       />
     </form>
   );

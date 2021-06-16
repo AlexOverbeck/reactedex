@@ -4,17 +4,6 @@ import { MockedProvider } from "@apollo/client/testing";
 import Pokedex from "./Pokedex";
 import { SEARCH_QUERY } from "../api/query";
 
-test("it's initially in a loading state while data loads", async () => {
-  render(
-    <MockedProvider mocks={[]} addTypename={false}>
-      <Pokedex />
-    </MockedProvider>
-  );
-
-  const loading = await screen.findByText(/loading/i);
-  expect(loading).toBeInTheDocument();
-});
-
 test("it enters an error state if the request fails", async () => {
   const mock = {
     request: {
@@ -34,27 +23,27 @@ test("it enters an error state if the request fails", async () => {
   expect(error).toBeInTheDocument();
 });
 
-test("renders successfully after a request", async () => {
+test("initially loads a pokemon and renders successfully after a request", async () => {
   const mock = {
     request: {
       query: SEARCH_QUERY,
-      variables: { search: "pikachu" },
+      variables: { search: "" },
     },
     result: {
       data: {
         pokemon: [
-          { id: 25, name: "pikachu", description: [{ flavor_text: "the pokemon description" }]}
+          { id: 25, name: "bulbasaur", description: [{ flavor_text: "the pokemon description" }]}
         ],
       }
     }
   };
 
-  render(
+  const { debug } = render(
     <MockedProvider mocks={[mock]} addTypename={false}>
       <Pokedex />
     </MockedProvider>
   );
 
-  const title = await screen.findByText(/pikachu/i);
+  const title = await screen.findByText(/bulbasaur/i);
   expect(title).toBeInTheDocument();
 });

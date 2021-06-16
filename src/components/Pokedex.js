@@ -13,11 +13,13 @@ function Pokedex(){
 
   useEffect(()=>{
     searchPokemon({
-      variables: { search: "pikachu" }
+      variables: { search: search }
     });
+  }, [search]);
 
-    if (data) {
-      const firstPokemon = data.pokemon[0];
+  useEffect(()=>{
+    if (data && data.pokemon.length) {
+      const firstPokemon = Object(data.pokemon[0]);
 
       setPokemon({
         id: firstPokemon.id,
@@ -25,11 +27,7 @@ function Pokedex(){
         description: firstPokemon.description[0].flavor_text,
       });
     }
-  }, [search, data])
-
-  if (!called || loading) {
-    return <p>Loading...</p>
-  };
+  }, [data]);
 
   if (error) {
     return <p>Error :(</p>
@@ -43,7 +41,7 @@ function Pokedex(){
         <div className="pokedex__light pokedex__light--yellow"></div>
         <div className="pokedex__light pokedex__light--green"></div>
         <div className="pokedex__form">
-          <Search />
+          <Search setSearch={setSearch} />
         </div>
       </div>
       <div className="pokedex__bottom">
