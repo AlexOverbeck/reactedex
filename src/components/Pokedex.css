@@ -1,6 +1,7 @@
 .pokedex {
   max-width: 450px;
-  margin: 0 auto;
+  margin: 1rem auto 0;
+  padding: 0 .5rem;
 }
 
 .pokedex__top {
